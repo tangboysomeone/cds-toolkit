@@ -1,33 +1,24 @@
-# coding: utf-8
-# __author__ = 'Administrator'
-# lst = range(2)
-# it = iter(lst)
-# try:
-#     while True:
-#         val = it.next()
-#         print val
-# except StopIteration as ex:
-#     print 'error', ex
-#
-# for idx, ele in enumerate(lst):
-#     print idx, ele
-#
-# itr2  = (x + 1 for x in lst)#生成器表达式
-# lst2 =  [x + 1 for x in lst]
-# print 'new list', lst2
-def list():
-    print 'taste my blade'
-    return [1, 2, 3, 4]
+class Study:
+        def __init__(self,name=None):
+                self.name = name
+        # def __del__(self):
+        #         print "Iamaway,baby!"
+        def __say(self):
+                print self.name
 
-class Point:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
+        def say(self):
+                print self.name
 
-points  = [Point(i, i + 1)
-                for i in list()]
-for point in points:
-    print point.x, point.y
+        def _say(self):
+                print self.name
 
-
-
+        # def __repr__(self):
+        #         return "Study('jacky')"
+# study = Study("zhuzhengjun")
+# study.__say()
+# print repr(study)
+# print type(eval(repr({})))
+# print type(repr(study)) # str
+# print type(eval(repr(Study("zhuzhengjun")))) # instance
+# study = eval(repr(Study("zhuzhengjun")))
+# study.say()

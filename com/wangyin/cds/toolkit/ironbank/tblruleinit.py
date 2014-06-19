@@ -27,11 +27,11 @@ def init_tbl_rule(self, cluster_name):
         range_key_id = None
         hash_key_id = None
 
-        for splitKey in split_keys:
-            if splitKey.type == 'range':
-                range_key_id = splitKey.id
-            elif splitKey.type == 'hash':
-                hash_key_id = splitKey.id
+        for split_key in split_keys:
+            if split_key.type == 'range':
+                range_key_id = split_key.id
+            elif split_key.type == 'hash':
+                hash_key_id = split_key.id
 
         if (not range_key_id) or (not hash_key_id):
             print r"there is no legal type( range or hash ) exists in this cluseter!"
@@ -43,8 +43,8 @@ def init_tbl_rule(self, cluster_name):
         conn = self.new_backingstore_conn()
         cursor = conn.cursor()
 
-        range_rule_ids = _init_rangrule(cursor, work_groups, args.max, args.slices)
-        hash_rule_ids = _init_hashrule(cursor, work_groups, args.slices)
+        range_rule_ids = __init_rangrule(cursor, work_groups, args.max, args.slices)
+        hash_rule_ids = __init_hashrule(cursor, work_groups, args.slices)
 
         #bind rules with split_key
         for rule_id in range_rule_ids:
@@ -72,7 +72,9 @@ def _insert_append(sql):
     return ' '.join(sql_parts)
 
 
-def _init_rangrule(cursor, work_groups, max, slices):
+def __init_rangrule(cursor, work_groups, max, slices):
+    """init range rule
+    """
     range_rule_ids = []
     group_count = len(work_groups)
     insert_rule_sql = _insert_append(
@@ -93,7 +95,7 @@ def _init_rangrule(cursor, work_groups, max, slices):
     return range_rule_ids
 
 
-def _init_hashrule(cursor, work_groups, slices):
+def __init_hashrule(cursor, work_groups, slices):
     hash_rule_ids = []
     group_count = len(work_groups)
     group_id = work_groups[0].id
