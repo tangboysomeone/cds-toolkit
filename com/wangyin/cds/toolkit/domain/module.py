@@ -35,11 +35,13 @@ class DbGroup:
 
 
 class DbInfo:
-    def __init__(self, id, ip, port, schema, is_master):
+    def __init__(self, id, ip, port, schema, is_master, user, pwd):
         self.id = id
         self.ip = ip
         self.port = port
         self.schema = schema
+        self.user = user
+        self.pwd = pwd
         self.is_master = is_master
 
 

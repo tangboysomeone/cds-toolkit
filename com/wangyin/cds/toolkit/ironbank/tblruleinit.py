@@ -5,7 +5,7 @@ from mysql.connector import Error
 from com.wangyin.cds.toolkit.rest.cds import CdsClient
 
 
-def init_tbl_rule(self, cluster_name):
+def init(self, cluster_name):
     parser = argparse.ArgumentParser(description='Table Rule Init Command Description')
     parser.add_argument('--h', help='the host of CDS-SERVER', default='127.0.0.1')
     parser.add_argument('--restPort', help='the rest interface port', default=8088, type=int)
@@ -16,7 +16,7 @@ def init_tbl_rule(self, cluster_name):
 
     try:
         cds = CdsClient(args.h, args.restport, args.eventport)
-        db_cluster = cds.getCluster()
+        db_cluster = cds.getCluster(cluster_name)
         if not db_cluster:
             print 'DbCluster doest\'t exist clusterName: {}'.format(cluster_name)
             return
@@ -58,8 +58,6 @@ def init_tbl_rule(self, cluster_name):
         print(e)
         conn.rollback()
     conn.close
-
-
 
 
 def _insert_append(sql):
@@ -106,7 +104,18 @@ def __init_hashrule(cursor, work_groups, slices):
         #create slices for each group
         for k in range(slices):
             table_suffix = '{0:03d}'.format(j * slices + k + 1)
-            cursor.execute(insert_rule_sql, ('hash', group_id, table_suffix, 0, 0, j * slices + k))
+            cursor.execute(insert_rule_sql, ('hash', group_id, table_suffix, 0, 0, __hash32shift(group_id)))
             hash_rule_ids.append(cursor.lastrowid)
 
     return hash_rule_ids
+
+
+#Tomas Wang ÕûÊýhashËã·¨
+def __hash32shift(key):
+    key = ~key + (key << 15)  # key = (key << 15) - key - 1;
+    key = key ^ (key >> 12)
+    key = key + (key << 2)
+    key = key ^ (key >> 4)
+    key = key * 2057  #key = (key + (key << 3)) + (key << 11);
+    key = key ^ (key >> 16)
+    return key
