@@ -14,8 +14,8 @@ regex_comment = re.compile('/\\*.+\\*/', re.DOTALL)
 def init(cluster_name, files):
     parser = argparse.ArgumentParser(description='Table Rule Init Command Description')
     parser.add_argument('--h', help='the host of CDS-SERVER', default='127.0.0.1')
-    parser.add_argument('--restPort', help='the rest interface port', default=8088, type=int)
-    parser.add_argument('--eventPort', help='the event port', default=8888, type=int)
+    parser.add_argument('--restport', help='the rest interface port', default=8088, type=int)
+    parser.add_argument('--eventport', help='the event port', default=8888, type=int)
     args = parser.parse_args()
 
     all_sql = []

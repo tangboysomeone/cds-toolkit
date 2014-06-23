@@ -2,17 +2,26 @@ __author__ = 'zy'
 import argparse
 import datetime
 from mysql.connector import Error
+from mysql import connector
+from com.wangyin.cds.toolkit.util.clusters import ClusterUtil
 from com.wangyin.cds.toolkit.rest.cds import CdsClient
 
 
-def init(self, cluster_name):
+def init(cluster_name):
     parser = argparse.ArgumentParser(description='Table Rule Init Command Description')
-    parser.add_argument('--h', help='the host of CDS-SERVER', default='127.0.0.1')
-    parser.add_argument('--restPort', help='the rest interface port', default=8088, type=int)
-    parser.add_argument('--eventPort', help='the event port', default=8888, type=int)
+    parser.add_argument('--S', help='the host of CDS-SERVER', default='127.0.0.1')
+    parser.add_argument('--restport', help='the rest interface port', default=8088, type=int)
+    parser.add_argument('--eventport', help='the event port', default=8888, type=int)
+    parser.add_argument('--h', help='the cluster management db ip', default='127.0.0.1')
+    parser.add_argument('--P', help='the cluster management db port', default=3306, type=int)
+    parser.add_argument('--u', help='the cluster management db username')
+    parser.add_argument('--p', help='the cluster management db password')
+    parser.add_argument('--database', help='the cluster management db password')
     parser.add_argument('--max', help='the max limit of range', default=1000000, type=int)
-    parser.add_argument('--slices', help='the slices per group', default=1000000, type=int)
+    parser.add_argument('--slices', help='the slices per group', default=4, type=int)
     args = parser.parse_args()
+
+    cds = CdsClient(args.h, args.restport, args.eventport)
 
     try:
         cds = CdsClient(args.h, args.restport, args.eventport)
@@ -40,7 +49,7 @@ def init(self, cluster_name):
         #insert rules
         bind_key_rule = "insert into rrulessplittingkey(splitting_key_id,depots_table_rules_id) values(%s,%s)"
 
-        conn = self.new_backingstore_conn()
+        conn = connector.connect(user=args.u, password=args.p, host=args.h, port=args.P, database=args.database)
         cursor = conn.cursor()
 
         range_rule_ids = __init_rangrule(cursor, work_groups, args.max, args.slices)
@@ -57,7 +66,6 @@ def init(self, cluster_name):
     except Error as e:
         print(e)
         conn.rollback()
-    conn.close
 
 
 def _insert_append(sql):
@@ -119,3 +127,5 @@ def __hash32shift(key):
     key = key * 2057  #key = (key + (key << 3)) + (key << 11);
     key = key ^ (key >> 16)
     return key
+
+

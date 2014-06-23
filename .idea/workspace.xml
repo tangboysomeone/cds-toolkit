@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2918004-1171-4605-ad27-41628fd93a9f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com/wangyin/cds/toolkit/paramiko/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com/wangyin/cds/toolkit/util/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com/wangyin/cds/toolkit/util/iterables.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com/wangyin/cds/toolkit/paramiko/remotessh.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com/wangyin/cds/toolkit/domain/module.py" afterPath="$PROJECT_DIR$/com/wangyin/cds/toolkit/domain/module.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com/wangyin/cds/toolkit/util/clusters.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/com/wangyin/cds/toolkit/testcase/testtbruleinit.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/schemainit.py" afterPath="$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/schemainit.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/tblruleinit.py" afterPath="$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/tblruleinit.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com/wangyin/cds/toolkit/test.py" afterPath="$PROJECT_DIR$/com/wangyin/cds/toolkit/test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\coderepo\gitrepo\cds-toolkit\com\wangyin\cds\toolkit\ironbank\dbclusterinit.py" afterPath="$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/schemainit.py" />
     </list>
     <ignored path="cds-toolkit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,28 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="iterables.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/util/iterables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="325">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/domain/module.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="22" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1875">
+            <state line="2" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="325">
               <folding />
             </state>
           </provider>
@@ -72,11 +50,8 @@
       <file leaf-file-name="testcdsclient.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/testcase/testcdsclient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="16" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="1650">
-              <folding>
-                <marker date="1403080949048" expanded="true" signature="398:434" placeholder="..." />
-                <marker date="1403080949048" expanded="true" signature="991:1103" placeholder="..." />
-              </folding>
+            <state line="52" column="23" selection-start="0" selection-end="2092" vertical-scroll-proportion="0.0" vertical-offset="1300" max-vertical-offset="1650">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,27 +59,45 @@
       <file leaf-file-name="tblruleinit.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/tblruleinit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="34" selection-start="1915" selection-end="1915" vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="3075">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schemainit.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/schemainit.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="22" selection-start="315" selection-end="315" vertical-scroll-proportion="76.85185" vertical-offset="2325" max-vertical-offset="3000">
+            <state line="110" column="27" selection-start="4562" selection-end="4563" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="3425">
               <folding>
-                <element signature="e#18#27#0" expanded="true" />
+                <element signature="e#18#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="remotessh.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="clusters.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/util/clusters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="72" column="0" selection-start="2818" selection-end="2818" vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2075">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testtbruleinit.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/testcase/testtbruleinit.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="35" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1050">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schemainit.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/schemainit.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="104" column="0" selection-start="3926" selection-end="3926" vertical-scroll-proportion="3.0795052" vertical-offset="732" max-vertical-offset="2875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="remotessh.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/paramiko/remotessh.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="20" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.6329114" vertical-offset="450" max-vertical-offset="2425">
+            <state line="27" column="30" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="2500">
               <folding />
             </state>
           </provider>
@@ -152,9 +145,12 @@
         <option value="$PROJECT_DIR$/com/wangyin/cds/toolkit/test.py" />
         <option value="$PROJECT_DIR$/com/wangyin/cds/toolkit/iterables.py" />
         <option value="$PROJECT_DIR$/com/wangyin/cds/toolkit/util/iterables.py" />
-        <option value="$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/schemainit.py" />
-        <option value="$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/tblruleinit.py" />
         <option value="$PROJECT_DIR$/com/wangyin/cds/toolkit/paramiko/remotessh.py" />
+        <option value="$PROJECT_DIR$/com/wangyin/cds/toolkit/localcluster.py" />
+        <option value="$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/tblruleinit.py" />
+        <option value="$PROJECT_DIR$/com/wangyin/cds/toolkit/util/clusters.py" />
+        <option value="$PROJECT_DIR$/com/wangyin/cds/toolkit/testcase/testtbruleinit.py" />
+        <option value="$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/schemainit.py" />
       </list>
     </option>
   </component>
@@ -489,8 +485,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\coderepo\gitrepo\cds-toolkit\com\wangyin\cds\toolkit\paramiko" />
       <recent name="D:\coderepo\gitrepo\cds-toolkit\com\wangyin\cds\toolkit\util" />
+      <recent name="D:\coderepo\gitrepo\cds-toolkit\com\wangyin\cds\toolkit" />
+      <recent name="D:\coderepo\gitrepo\cds-toolkit\com\wangyin\cds\toolkit\paramiko" />
       <recent name="D:\coderepo\gitrepo\cds-toolkit\com\wangyin\cds\toolkit\ironbank" />
       <recent name="D:\coderepo\gitrepo\cds-toolkit\com\wangyin\cds\toolkit\testcase" />
     </key>
@@ -719,7 +716,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1398374" sideWeight="0.49962825" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20975609" sideWeight="0.49962825" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.49962825" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25204462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -730,6 +726,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.49962825" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -759,16 +756,44 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/test.py">
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/testcase/testtbruleinit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0" vertical-offset="275" max-vertical-offset="725">
+        <state line="24" column="35" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1050">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/domain/module.py">
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/schemainit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="54" selection-start="882" selection-end="891" vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1825">
+        <state line="4" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="3000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/paramiko/remotessh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="30" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="2500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python27/Lib/UserDict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="19" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="4650">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="175" max-vertical-offset="325">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/util/iterables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="325">
           <folding />
         </state>
       </provider>
@@ -782,27 +807,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/testcase/testcdsclient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="16" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="1650">
-          <folding>
-            <marker date="1403080949048" expanded="true" signature="398:434" placeholder="..." />
-            <marker date="1403080949048" expanded="true" signature="991:1103" placeholder="..." />
-          </folding>
+        <state line="52" column="23" selection-start="0" selection-end="2092" vertical-scroll-proportion="0.0" vertical-offset="1300" max-vertical-offset="1650">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/tblruleinit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="23" selection-start="2774" selection-end="2774" vertical-scroll-proportion="0.0" vertical-offset="1925" max-vertical-offset="2925">
+        <state line="15" column="47" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="3425">
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/util/clusters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="0" selection-start="2818" selection-end="2818" vertical-scroll-proportion="0.0" vertical-offset="1800" max-vertical-offset="2075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/testcase/testtbruleinit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="35" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1050">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/schemainit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="15" selection-start="3284" selection-end="3284" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="2400">
-          <folding>
-            <element signature="e#18#27#0" expanded="true" />
-          </folding>
+        <state line="4" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="100" max-vertical-offset="3000">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/paramiko/remotessh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="30" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="2500">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -822,16 +865,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="12" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="450">
-          <folding />
-        </state>
+        <state line="11" column="23" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0" vertical-offset="275" max-vertical-offset="725" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/domain/module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="54" selection-start="882" selection-end="891" vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1825">
+        <state line="37" column="54" selection-start="882" selection-end="891" vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1825" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/rest/cds.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="23" selection-start="4157" selection-end="4157" vertical-scroll-proportion="0.0" vertical-offset="2900" max-vertical-offset="3250">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/testcase/testcdsclient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="16" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="1650">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/tblruleinit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="23" selection-start="2774" selection-end="2774" vertical-scroll-proportion="0.0" vertical-offset="1925" max-vertical-offset="2925">
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/schemainit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="15" selection-start="3284" selection-end="3284" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="2400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python27/Lib/UserDict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="19" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="4650">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0" vertical-offset="175" max-vertical-offset="325">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="12" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="450" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/domain/module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="54" selection-start="882" selection-end="891" vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1825" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/rest/cds.py">
@@ -844,17 +937,16 @@
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/testcase/testcdsclient.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="16" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="1650">
-          <folding>
-            <marker date="1403080949048" expanded="true" signature="398:434" placeholder="..." />
-            <marker date="1403080949048" expanded="true" signature="991:1103" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/tblruleinit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="74" column="27" selection-start="2757" selection-end="2757" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="2925">
-          <folding />
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -867,16 +959,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0" vertical-offset="489" max-vertical-offset="975">
-          <folding />
-        </state>
+        <state line="33" column="0" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0" vertical-offset="489" max-vertical-offset="975" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/domain/module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="54" selection-start="882" selection-end="891" vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1825">
-          <folding />
-        </state>
+        <state line="37" column="54" selection-start="882" selection-end="891" vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1825" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/rest/cds.py">
@@ -889,25 +977,22 @@
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/testcase/testcdsclient.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="16" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="1650">
-          <folding>
-            <marker date="1403080949048" expanded="true" signature="398:434" placeholder="..." />
-            <marker date="1403080949048" expanded="true" signature="991:1103" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/tblruleinit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="21" selection-start="1524" selection-end="1524" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="2875">
-          <folding />
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/1494736245/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="23" selection-start="1247" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="601" max-vertical-offset="128050">
-          <folding />
-        </state>
+        <state line="37" column="23" selection-start="1247" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="601" max-vertical-offset="128050" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/test2.py">
@@ -919,26 +1004,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="175">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/testcase/testcdsclient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="16" selection-start="1804" selection-end="1804" vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="1650">
-          <folding>
-            <marker date="1403080949048" expanded="true" signature="398:434" placeholder="..." />
-            <marker date="1403080949048" expanded="true" signature="991:1103" placeholder="..." />
-          </folding>
-        </state>
+        <state line="1" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="175" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.PyCharm30/system/python_stubs/1494736245/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1777" column="69" selection-start="60457" selection-end="60457" vertical-scroll-proportion="0.46648794" vertical-offset="44251" max-vertical-offset="128050">
-          <folding />
-        </state>
+        <state line="1777" column="69" selection-start="60457" selection-end="60457" vertical-scroll-proportion="0.46648794" vertical-offset="44251" max-vertical-offset="128050" />
       </provider>
     </entry>
     <entry file="file://D:/Python27/Lib/UserDict.py">
@@ -964,14 +1035,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/domain/module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="22" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1875">
-          <folding />
-        </state>
+        <state line="43" column="22" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0" vertical-offset="797" max-vertical-offset="1875" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+        <state line="10" column="0" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425" />
+      </provider>
+    </entry>
+    <entry file="file://D:/Python27/Lib/site-packages/mysql/connector/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="1958" selection-end="1958" vertical-scroll-proportion="-0.75549453" vertical-offset="975" max-vertical-offset="2850" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/paramiko/remotessh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="30" selection-start="943" selection-end="943" vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="2425">
           <folding />
         </state>
       </provider>
@@ -983,32 +1062,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Python27/Lib/site-packages/mysql/connector/__init__.py">
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/util/clusters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="1958" selection-end="1958" vertical-scroll-proportion="-0.75549453" vertical-offset="975" max-vertical-offset="2850">
+        <state line="72" column="0" selection-start="2818" selection-end="2818" vertical-scroll-proportion="0.0" vertical-offset="1347" max-vertical-offset="2050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/testcase/testcdsclient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="23" selection-start="0" selection-end="2092" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/testcase/testtbruleinit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="35" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1050">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/tblruleinit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="34" selection-start="1915" selection-end="1915" vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="3075">
-          <folding />
+        <state line="110" column="27" selection-start="4562" selection-end="4563" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="3425">
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/ironbank/schemainit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="315" selection-end="315" vertical-scroll-proportion="76.85185" vertical-offset="2325" max-vertical-offset="3000">
-          <folding>
-            <element signature="e#18#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/wangyin/cds/toolkit/paramiko/remotessh.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="20" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.6329114" vertical-offset="450" max-vertical-offset="2425">
+        <state line="104" column="0" selection-start="3926" selection-end="3926" vertical-scroll-proportion="3.0795052" vertical-offset="732" max-vertical-offset="2875">
           <folding />
         </state>
       </provider>

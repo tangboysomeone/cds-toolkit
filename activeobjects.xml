@@ -1,0 +1,2247 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<backup xmlns="http://www.atlassian.com/ao" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <database>
+    <meta key="database.name" value="PostgreSQL"/>
+    <meta key="database.version" value="8.4.8"/>
+    <meta key="database.minorVersion" value="4"/>
+    <meta key="database.majorVersion" value="8"/>
+    <meta key="driver.name" value="PostgreSQL Native Driver"/>
+    <meta key="driver.version" value="PostgreSQL 8.4 JDBC4 (build 702)"/>
+  </database>
+  <table name="AO_013613_HD_SCHEME">
+    <column name="DEFAULT_SCHEME" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_013613_HD_SCHEME_DAY">
+    <column name="DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DURATION_SECONDS" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="HOLIDAY_SCHEME_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_013613_HD_SCHEME_DAY" fromColumn="HOLIDAY_SCHEME_ID" toTable="AO_013613_HD_SCHEME" toColumn="ID"/>
+  </table>
+  <table name="AO_013613_HD_SCHEME_MEMBER">
+    <column name="HOLIDAY_SCHEME_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="USER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_013613_HD_SCHEME_MEMBER" fromColumn="HOLIDAY_SCHEME_ID" toTable="AO_013613_HD_SCHEME" toColumn="ID"/>
+  </table>
+  <table name="AO_013613_PERMISSION_GROUP">
+    <column name="GROUP_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PERMISSION_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_013613_WL_SCHEME">
+    <column name="DEFAULT_SCHEME" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_013613_WL_SCHEME_DAY">
+    <column name="DAY" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="REQUIRED_SECONDS" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="WORKLOAD_SCHEME_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_013613_WL_SCHEME_DAY" fromColumn="WORKLOAD_SCHEME_ID" toTable="AO_013613_WL_SCHEME" toColumn="ID"/>
+  </table>
+  <table name="AO_013613_WL_SCHEME_MEMBER">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MEMBER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="WORKLOAD_SCHEME_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_013613_WL_SCHEME_MEMBER" fromColumn="WORKLOAD_SCHEME_ID" toTable="AO_013613_WL_SCHEME" toColumn="ID"/>
+  </table>
+  <table name="AO_098293_ANNOUNCEMENT_ENTITY">
+    <column name="CREATOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="END_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="EVENT_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MESSAGE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="START_TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="TARGET_GROUPS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_098293_CONFIGURATION_ENTITY">
+    <column name="ACE_ENABLED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ZONE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_21D670_WHITELIST_RULES">
+    <column name="ALLOWINBOUND" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="EXPRESSION" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_38321B_CUSTOM_CONTENT_LINK">
+    <column name="CONTENT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LINK_LABEL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LINK_URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SEQUENCE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_3A3ECC_JIRACOMMENT_MAPPING">
+    <column name="COMMENT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="IS_NATIVE" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="NATIVE" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="PARENT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REMOTE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REMOTE_OBJECT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REMOTE_SYSTEM_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_3A3ECC_JIRAMAPPING_BEAN">
+    <column name="ATTACHMENT_SYNC_ENABLED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="AUTO_PULL_COMMENTS_ENABLED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="AUTO_PUSH_COMMENTS_ENABLED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="AUTO_PUSH_COMMENT_FOR_MS" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="ENABLE_RESTRICTED_COMMENTS" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="EXTERNAL_TO_JIRA_MAPPING_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="JIRAMAPPING_SET_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="JIRA_TO_EXTERNAL_MAPPING_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="QUERY_OPTIMIZED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="REMOTE_OBJECT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REMOTE_SYSTEM_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REQUIRED_FIELD_CHECK_EN" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <foreignKey fromTable="AO_3A3ECC_JIRAMAPPING_BEAN" fromColumn="JIRAMAPPING_SET_ID" toTable="AO_3A3ECC_JIRAMAPPING_SET" toColumn="ID"/>
+  </table>
+  <table name="AO_3A3ECC_JIRAMAPPING_SCHEME">
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="JSON_MAPPING" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_3A3ECC_JIRAMAPPING_SET">
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_3A3ECC_JIRAPROJECT_MAPPING">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="JIRAMAPPING_SCHEME_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_3A3ECC_JIRAPROJECT_MAPPING" fromColumn="JIRAMAPPING_SCHEME_ID" toTable="AO_3A3ECC_JIRAMAPPING_SCHEME" toColumn="ID"/>
+  </table>
+  <table name="AO_3A3ECC_REMOTE_IDCF">
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="REMOTE_OBJECT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REMOTE_SYSTEM_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_3A3ECC_REMOTE_LINK_CONFIG">
+    <column name="CONNECTION_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="DISPLAY_TEMPLATE" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="ENABLED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="OBJECT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_437CB5_AGREEMENT">
+    <column name="ACCESS_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ALLOW_PUBLIC_COMMENTS" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RECEIVER_URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SENDER_URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SERVICE_USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SYNC_TAGS" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="UUID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_437CB5_COMMENT_LINK">
+    <column name="AGREEMENT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="COMMENT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="COMMENT_UUID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_437CB5_COMMENT_LINK" fromColumn="AGREEMENT_ID" toTable="AO_437CB5_AGREEMENT" toColumn="ID"/>
+  </table>
+  <table name="AO_437CB5_TICKET_LINK">
+    <column name="AGREEMENT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TICKET_UUID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_437CB5_TICKET_LINK" fromColumn="AGREEMENT_ID" toTable="AO_437CB5_AGREEMENT" toColumn="ID"/>
+  </table>
+  <table name="AO_4AEACD_WEBHOOK_DAO">
+    <column name="ENABLED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="ENCODED_EVENTS" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="EXCLUDE_ISSUE_DETAILS" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="FILTER" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="JQL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_UPDATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="LAST_UPDATED_USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="PARAMETERS" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="REGISTRATION_METHOD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+  </table>
+  <table name="AO_54307E_CONFLUENCEKB">
+    <column name="APPLINKS_APPLICATION_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="63"/>
+    <column name="APPLINK_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="APPLINK_URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="SERVICE_DESK_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SPACE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SPACE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SPACE_URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <foreignKey fromTable="AO_54307E_CONFLUENCEKB" fromColumn="SERVICE_DESK_ID" toTable="AO_54307E_SERVICEDESK" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_CONFLUENCEKBENABLED">
+    <column name="CONFLUENCE_KBID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ENABLED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="FORM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="SERVICE_DESK_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_54307E_CONFLUENCEKBENABLED" fromColumn="CONFLUENCE_KBID" toTable="AO_54307E_CONFLUENCEKB" toColumn="ID"/>
+    <foreignKey fromTable="AO_54307E_CONFLUENCEKBENABLED" fromColumn="SERVICE_DESK_ID" toTable="AO_54307E_SERVICEDESK" toColumn="ID"/>
+    <foreignKey fromTable="AO_54307E_CONFLUENCEKBENABLED" fromColumn="FORM_ID" toTable="AO_54307E_VIEWPORTFORM" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_CONFLUENCEKBLABELS">
+    <column name="CONFLUENCE_KBID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FORM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LABEL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SERVICE_DESK_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_54307E_CONFLUENCEKBLABELS" fromColumn="CONFLUENCE_KBID" toTable="AO_54307E_CONFLUENCEKB" toColumn="ID"/>
+    <foreignKey fromTable="AO_54307E_CONFLUENCEKBLABELS" fromColumn="SERVICE_DESK_ID" toTable="AO_54307E_SERVICEDESK" toColumn="ID"/>
+    <foreignKey fromTable="AO_54307E_CONFLUENCEKBLABELS" fromColumn="FORM_ID" toTable="AO_54307E_VIEWPORTFORM" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_CUSTOMTHEME">
+    <column name="HEADER_BGCOLOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="HEADER_LINK_COLOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="HEADER_LINK_HOVER_BGCOLOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="HEADER_LINK_HOVER_COLOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_54307E_GOAL">
+    <column name="CALENDAR_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="DEFAULT_GOAL" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="JQL_QUERY" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <column name="POS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TARGET_DURATION" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TIME_METRIC_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TIME_UPDATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <foreignKey fromTable="AO_54307E_GOAL" fromColumn="TIME_METRIC_ID" toTable="AO_54307E_TIMEMETRIC" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_GROUP">
+    <column name="GROUP_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="127"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="VIEWPORT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_54307E_GROUP" fromColumn="VIEWPORT_ID" toTable="AO_54307E_VIEWPORT" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_GROUPTOREQUESTTYPE">
+    <column name="GROUP_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="REQUEST_TYPE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_54307E_GROUPTOREQUESTTYPE" fromColumn="GROUP_ID" toTable="AO_54307E_GROUP" toColumn="ID"/>
+    <foreignKey fromTable="AO_54307E_GROUPTOREQUESTTYPE" fromColumn="REQUEST_TYPE_ID" toTable="AO_54307E_VIEWPORTFORM" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_IMAGES">
+    <column name="CONTENTS" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_54307E_METRICCONDITION">
+    <column name="CONDITION_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FACTORY_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PLUGIN_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TIME_METRIC_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_54307E_METRICCONDITION" fromColumn="TIME_METRIC_ID" toTable="AO_54307E_TIMEMETRIC" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_QUEUE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="JQL" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PROJECT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="QUEUE_ORDER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_54307E_QUEUECOLUMN">
+    <column name="COLUMN_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="COLUMN_ORDER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="QUEUE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_54307E_QUEUECOLUMN" fromColumn="QUEUE_ID" toTable="AO_54307E_QUEUE" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_REPORT">
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REPORT_ORDER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="REPORT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="63"/>
+    <column name="SERVICE_DESK_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="UPDATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <foreignKey fromTable="AO_54307E_REPORT" fromColumn="SERVICE_DESK_ID" toTable="AO_54307E_SERVICEDESK" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_SERIES">
+    <column name="COLOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="63"/>
+    <column name="CREATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="JQL" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="REPORT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SERIES_DATA_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SERIES_LABEL" primaryKey="false" autoIncrement="false" sqlType="12" precision="63"/>
+    <column name="TIME_METRIC_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="UPDATED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <foreignKey fromTable="AO_54307E_SERIES" fromColumn="REPORT_ID" toTable="AO_54307E_REPORT" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_SERVICEDESK">
+    <column name="DISABLED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="OPEN_CUSTOMER_ACCESS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PROJECT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PUBLIC_SIGNUP" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_54307E_STATUSMAPPING">
+    <column name="FORM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="STATUS_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STATUS_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_54307E_STATUSMAPPING" fromColumn="FORM_ID" toTable="AO_54307E_VIEWPORTFORM" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_TIMEMETRIC">
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="DEFINITION_CHANGE_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="GOALS_CHANGE_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SERVICE_DESK_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_54307E_TIMEMETRIC" fromColumn="SERVICE_DESK_ID" toTable="AO_54307E_SERVICEDESK" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_VIEWPORT">
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LOGO_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SEND_EMAIL_NOTIFICATIONS" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="THEME_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_54307E_VIEWPORT" fromColumn="THEME_ID" toTable="AO_54307E_CUSTOMTHEME" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_VIEWPORTFIELD">
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="DISPLAYED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FIELD_ORDER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FIELD_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FORM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LABEL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REQUIRED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <foreignKey fromTable="AO_54307E_VIEWPORTFIELD" fromColumn="FORM_ID" toTable="AO_54307E_VIEWPORTFORM" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_VIEWPORTFIELDVALUE">
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FIELD_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="VALUE_ORDER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_54307E_VIEWPORTFIELDVALUE" fromColumn="FIELD_ID" toTable="AO_54307E_VIEWPORTFIELD" toColumn="ID"/>
+  </table>
+  <table name="AO_54307E_VIEWPORTFORM">
+    <column name="CALL_TO_ACTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="FORM_ORDER" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ICON" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="INTRO" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="ISSUE_TYPE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="VIEWPORT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_54307E_VIEWPORTFORM" fromColumn="VIEWPORT_ID" toTable="AO_54307E_VIEWPORT" toColumn="ID"/>
+  </table>
+  <table name="AO_563AEE_ACTIVITY_ENTITY">
+    <column name="ACTIVITY_ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="ACTOR_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="CONTENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="GENERATOR_DISPLAY_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="GENERATOR_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <column name="ICON_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <column name="ISSUE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="OBJECT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="POSTER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PUBLISHED" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="TARGET_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TITLE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <column name="USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="VERB" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <foreignKey fromTable="AO_563AEE_ACTIVITY_ENTITY" fromColumn="ACTOR_ID" toTable="AO_563AEE_ACTOR_ENTITY" toColumn="ID"/>
+    <foreignKey fromTable="AO_563AEE_ACTIVITY_ENTITY" fromColumn="ICON_ID" toTable="AO_563AEE_MEDIA_LINK_ENTITY" toColumn="ID"/>
+    <foreignKey fromTable="AO_563AEE_ACTIVITY_ENTITY" fromColumn="OBJECT_ID" toTable="AO_563AEE_OBJECT_ENTITY" toColumn="ID"/>
+    <foreignKey fromTable="AO_563AEE_ACTIVITY_ENTITY" fromColumn="TARGET_ID" toTable="AO_563AEE_TARGET_ENTITY" toColumn="ID"/>
+  </table>
+  <table name="AO_563AEE_ACTOR_ENTITY">
+    <column name="FULL_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROFILE_PAGE_URI" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <column name="PROFILE_PICTURE_URI" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <column name="USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_563AEE_MEDIA_LINK_ENTITY">
+    <column name="DURATION" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="HEIGHT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <column name="WIDTH" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_563AEE_OBJECT_ENTITY">
+    <column name="CONTENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DISPLAY_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="IMAGE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="OBJECT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <column name="OBJECT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <column name="SUMMARY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <foreignKey fromTable="AO_563AEE_OBJECT_ENTITY" fromColumn="IMAGE_ID" toTable="AO_563AEE_MEDIA_LINK_ENTITY" toColumn="ID"/>
+  </table>
+  <table name="AO_563AEE_TARGET_ENTITY">
+    <column name="CONTENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DISPLAY_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="IMAGE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="OBJECT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <column name="OBJECT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <column name="SUMMARY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="767"/>
+    <foreignKey fromTable="AO_563AEE_TARGET_ENTITY" fromColumn="IMAGE_ID" toTable="AO_563AEE_MEDIA_LINK_ENTITY" toColumn="ID"/>
+  </table>
+  <table name="AO_60DB71_AUDITENTRY">
+    <column name="CATEGORY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DATA" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="ENTITY_CLASS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ENTITY_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="TIME" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_60DB71_BOARDADMINS">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RAPID_VIEW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_60DB71_BOARDADMINS" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
+  </table>
+  <table name="AO_60DB71_CARDCOLOR">
+    <column name="COLOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="POS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="RAPID_VIEW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="STRATEGY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="VAL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_60DB71_CARDCOLOR" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
+  </table>
+  <table name="AO_60DB71_COLUMN">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="MAXIM" primaryKey="false" autoIncrement="false" sqlType="8" precision="17" scale="17"/>
+    <column name="MINIM" primaryKey="false" autoIncrement="false" sqlType="8" precision="17" scale="17"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="POS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="RAPID_VIEW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_60DB71_COLUMN" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
+  </table>
+  <table name="AO_60DB71_COLUMNSTATUS">
+    <column name="COLUMN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="POS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STATUS_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_60DB71_COLUMNSTATUS" fromColumn="COLUMN_ID" toTable="AO_60DB71_COLUMN" toColumn="ID"/>
+  </table>
+  <table name="AO_60DB71_DETAILVIEWFIELD">
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="POS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="RAPID_VIEW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_60DB71_DETAILVIEWFIELD" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
+  </table>
+  <table name="AO_60DB71_ESTIMATESTATISTIC">
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="RAPID_VIEW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TYPE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_60DB71_ESTIMATESTATISTIC" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
+  </table>
+  <table name="AO_60DB71_ISSUERANKING">
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="NEXT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_60DB71_ISSUERANKINGLOG">
+    <column name="CUSTOM_FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="LOG_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NEW_NEXT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="NEW_PREVIOUS_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="OLD_NEXT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="OLD_PREVIOUS_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SANITY_CHECKED" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_60DB71_LEXORANK">
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="LOCK_HASH" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LOCK_TIME" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="RANK" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_60DB71_LEXORANKBALANCER">
+    <column name="DISABLE_RANK_OPERATIONS" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="REBALANCE_TIME" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_60DB71_NONWORKINGDAY">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="ISO8601_DATE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="WORKING_DAYS_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_60DB71_NONWORKINGDAY" fromColumn="WORKING_DAYS_ID" toTable="AO_60DB71_WORKINGDAYS" toColumn="ID"/>
+  </table>
+  <table name="AO_60DB71_QUICKFILTER">
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="POS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="QUERY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RAPID_VIEW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_60DB71_QUICKFILTER" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
+  </table>
+  <table name="AO_60DB71_RANKABLEOBJECT">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_60DB71_RANK_ISSUE_LINK">
+    <column name="ISSUE_ID" primaryKey="true" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="NEXT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_60DB71_RAPIDVIEW">
+    <column name="CARD_COLOR_STRATEGY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="OWNER_USER_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SAVED_FILTER_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SPRINTS_ENABLED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="SPRINT_MARKERS_MIGRATED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="SWIMLANE_STRATEGY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_60DB71_SPRINT">
+    <column name="CLOSED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="COMPLETE_DATE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="END_DATE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RAPID_VIEW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="STARTED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="START_DATE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_60DB71_SPRINTMARKER">
+    <column name="ID" primaryKey="true" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="MARKER_CONTEXT" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_60DB71_STATSFIELD">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="RAPID_VIEW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TYPE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_60DB71_STATSFIELD" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
+  </table>
+  <table name="AO_60DB71_SUBQUERY">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="QUERY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RAPID_VIEW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SECTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_60DB71_SUBQUERY" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
+  </table>
+  <table name="AO_60DB71_SWIMLANE">
+    <column name="DEFAULT_LANE" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="POS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="QUERY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RAPID_VIEW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <foreignKey fromTable="AO_60DB71_SWIMLANE" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
+  </table>
+  <table name="AO_60DB71_TRACKINGSTATISTIC">
+    <column name="FIELD_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="RAPID_VIEW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TYPE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_60DB71_TRACKINGSTATISTIC" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
+  </table>
+  <table name="AO_60DB71_VERSION">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="START_DATE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="VERSION_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_60DB71_WORKINGDAYS">
+    <column name="FRIDAY" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="-5" precision="19"/>
+    <column name="MONDAY" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="RAPID_VIEW_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SATURDAY" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="SUNDAY" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="THURSDAY" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="TIMEZONE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TUESDAY" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="WEDNESDAY" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <foreignKey fromTable="AO_60DB71_WORKINGDAYS" fromColumn="RAPID_VIEW_ID" toTable="AO_60DB71_RAPIDVIEW" toColumn="ID"/>
+  </table>
+  <table name="AO_86ED1B_GRACE_PERIOD">
+    <column name="FROM_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="OPEN_UNTIL" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="RECEIVER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TO_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+  </table>
+  <table name="AO_86ED1B_PROJECT_CONFIG">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PLANNING_COLOUR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+  </table>
+  <table name="AO_86ED1B_STREAMS_ENTRY">
+    <column name="ACTOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ENTRY_CLASS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ENTRY_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="POSTED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="RAW_PARAMS" primaryKey="false" autoIncrement="false" sqlType="12" precision="500"/>
+    <column name="RAW_PARAMS_JSON" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="RAW_PARAMS_LONG" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="RECEIVER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_86ED1B_TIMEPLAN">
+    <column name="COLLABORATOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="COMMENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="FROM_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PLAN_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PLAN_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REQUESTER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REVIEWER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SECONDS" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TIME_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TO_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="WORKFLOW_STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_86ED1B_TIMESHEET_STATUS">
+    <column name="ACTOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DATE_CHANGED" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="DATE_CREATED" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="DATE_FROM" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="DATE_TO" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PERIOD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PERIOD_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PERIOD_VIEW" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REASON" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REVIEWER_USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_88DE6A_AGREEMENT">
+    <column name="ACCEPTED_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="VERSION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_88DE6A_CONNECTION">
+    <column name="APP_LINK_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SYSTEM_TYPE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_88DE6A_LICENSE">
+    <column name="CONTENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="SYSTEM_TYPE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_88DE6A_MAPPING_BEAN">
+    <column name="FROM_OBJECT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FROM_SYSTEM_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LABEL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TO_OBJECT_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TO_SYSTEM_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_88DE6A_MAPPING_ENTRY">
+    <column name="DEFAULT_VALUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FROM_FIELD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="JSONTRANSFORMER_ATTRIBUTES" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="MAPPING_BEAN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TO_FIELD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TRANSFORMER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_88DE6A_MAPPING_ENTRY" fromColumn="MAPPING_BEAN_ID" toTable="AO_88DE6A_MAPPING_BEAN" toColumn="ID"/>
+  </table>
+  <table name="AO_88DE6A_TRANSACTION">
+    <column name="ACTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LOCAL_OBJECT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REMOTE_OBJECT_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REMOTE_SYSTEM_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REMOTE_SYSTEM_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RESULT" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="USER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_88DE6A_TRANSACTION_CONTENT">
+    <column name="CONTENT" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TRANSACTION_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_88DE6A_TRANSACTION_CONTENT" fromColumn="TRANSACTION_ID" toTable="AO_88DE6A_TRANSACTION" toColumn="ID"/>
+  </table>
+  <table name="AO_88DE6A_TRANSACTION_LOG">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LEVEL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="MESSAGE" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="TIME" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="TRANSACTION_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_88DE6A_TRANSACTION_LOG" fromColumn="TRANSACTION_ID" toTable="AO_88DE6A_TRANSACTION" toColumn="ID"/>
+  </table>
+  <table name="AO_A44657_HEALTH_CHECK_ENTITY">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_AEFED0_MEMBERSHIP">
+    <column name="AVAILABILITY" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FROM_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEAM_MEMBER_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEAM_ROLE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TO_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <foreignKey fromTable="AO_AEFED0_MEMBERSHIP" fromColumn="TEAM_MEMBER_ID" toTable="AO_AEFED0_TEAM_MEMBER_V2" toColumn="ID"/>
+    <foreignKey fromTable="AO_AEFED0_MEMBERSHIP" fromColumn="TEAM_ROLE_ID" toTable="AO_AEFED0_TEAM_ROLE" toColumn="ID"/>
+  </table>
+  <table name="AO_AEFED0_TEAM">
+    <column name="DESCRIPTION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_AEFED0_TEAM_LINK">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="SCOPE" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="TEAM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_AEFED0_TEAM_LINK" fromColumn="TEAM_ID" toTable="AO_AEFED0_TEAM_V2" toColumn="ID"/>
+  </table>
+  <table name="AO_AEFED0_TEAM_MEMBER">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MEMBER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="MEMBER_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ROLE_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_AEFED0_TEAM_MEMBER_V2">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MEMBER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="MEMBER_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEAM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_AEFED0_TEAM_MEMBER_V2" fromColumn="TEAM_ID" toTable="AO_AEFED0_TEAM_V2" toColumn="ID"/>
+  </table>
+  <table name="AO_AEFED0_TEAM_PERMISSION">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MEMBER_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PERMISSION_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PERMISSION_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TEAM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_AEFED0_TEAM_PERMISSION" fromColumn="TEAM_ID" toTable="AO_AEFED0_TEAM_V2" toColumn="ID"/>
+  </table>
+  <table name="AO_AEFED0_TEAM_ROLE">
+    <column name="I18N_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_AEFED0_TEAM_TO_MEMBER">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="TEAM_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TEAM_MEMBER_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_AEFED0_TEAM_TO_MEMBER" fromColumn="TEAM_ID" toTable="AO_AEFED0_TEAM" toColumn="ID"/>
+    <foreignKey fromTable="AO_AEFED0_TEAM_TO_MEMBER" fromColumn="TEAM_MEMBER_ID" toTable="AO_AEFED0_TEAM_MEMBER" toColumn="ID"/>
+  </table>
+  <table name="AO_AEFED0_TEAM_V2">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LEAD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="MISSION_V2" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SUMMARY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_B9A0F0_APPLIED_TEMPLATE">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PROJECT_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="PROJECT_TEMPLATE_MODULE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_TEMPLATE_WEB_ITEM_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_E24DEA_HOLIDAY">
+    <column name="DAY" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LOCALE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="MONTH" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="YEAR" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_E24DEA_TIMESHEET_JOB_CFG">
+    <column name="CRON_EXPRESSION" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARAMS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_E8B6CC_BRANCH">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REPOSITORY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_E8B6CC_BRANCH" fromColumn="REPOSITORY_ID" toTable="AO_E8B6CC_REPOSITORY_MAPPING" toColumn="ID"/>
+  </table>
+  <table name="AO_E8B6CC_BRANCH_HEAD_MAPPING">
+    <column name="BRANCH_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="HEAD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="REPOSITORY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_E8B6CC_BRANCH_HEAD_MAPPING" fromColumn="REPOSITORY_ID" toTable="AO_E8B6CC_REPOSITORY_MAPPING" toColumn="ID"/>
+  </table>
+  <table name="AO_E8B6CC_CHANGESET_MAPPING">
+    <column name="AUTHOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="AUTHOR_EMAIL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="BRANCH" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="FILES_DATA" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="FILE_COUNT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="FILE_DETAILS_JSON" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="MESSAGE" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="NODE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARENTS_DATA" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RAW_AUTHOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RAW_NODE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REPOSITORY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SMARTCOMMIT_AVAILABLE" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="VERSION" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_E8B6CC_COMMIT">
+    <column name="AUTHOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="AUTHOR_AVATAR_URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="DOMAIN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MESSAGE" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="NODE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RAW_AUTHOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_E8B6CC_GIT_HUB_EVENT">
+    <column name="CREATED_AT" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="GIT_HUB_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="REPOSITORY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SAVE_POINT" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <foreignKey fromTable="AO_E8B6CC_GIT_HUB_EVENT" fromColumn="REPOSITORY_ID" toTable="AO_E8B6CC_REPOSITORY_MAPPING" toColumn="ID"/>
+  </table>
+  <table name="AO_E8B6CC_ISSUE_MAPPING">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NODE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REPOSITORY_URI" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_E8B6CC_ISSUE_MAPPING_V2">
+    <column name="AUTHOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="BRANCH" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="FILES_DATA" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_ID" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="MESSAGE" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="NODE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PARENTS_DATA" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RAW_AUTHOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RAW_NODE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REPOSITORY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="VERSION" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_E8B6CC_ISSUE_TO_BRANCH">
+    <column name="BRANCH_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_E8B6CC_ISSUE_TO_BRANCH" fromColumn="BRANCH_ID" toTable="AO_E8B6CC_BRANCH" toColumn="ID"/>
+  </table>
+  <table name="AO_E8B6CC_ISSUE_TO_CHANGESET">
+    <column name="CHANGESET_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_E8B6CC_ISSUE_TO_CHANGESET" fromColumn="CHANGESET_ID" toTable="AO_E8B6CC_CHANGESET_MAPPING" toColumn="ID"/>
+  </table>
+  <table name="AO_E8B6CC_MESSAGE">
+    <column name="ADDRESS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PAYLOAD" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="PAYLOAD_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PRIORITY" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_E8B6CC_MESSAGE_QUEUE_ITEM">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST_FAILED" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="MESSAGE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="QUEUE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="RETRIES_COUNT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="STATE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="STATE_INFO" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_E8B6CC_MESSAGE_QUEUE_ITEM" fromColumn="MESSAGE_ID" toTable="AO_E8B6CC_MESSAGE" toColumn="ID"/>
+  </table>
+  <table name="AO_E8B6CC_MESSAGE_TAG">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="MESSAGE_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="TAG" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_E8B6CC_MESSAGE_TAG" fromColumn="MESSAGE_ID" toTable="AO_E8B6CC_MESSAGE" toColumn="ID"/>
+  </table>
+  <table name="AO_E8B6CC_ORGANIZATION_MAPPING">
+    <column name="ACCESS_TOKEN" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ADMIN_PASSWORD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ADMIN_USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="AUTOLINK_NEW_REPOS" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="DEFAULT_GROUPS_SLUGS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DVCS_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="HOST_URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="OAUTH_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="OAUTH_SECRET" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SMARTCOMMITS_FOR_NEW_REPOS" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+  </table>
+  <table name="AO_E8B6CC_PROJECT_MAPPING">
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PASSWORD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PROJECT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REPOSITORY_URI" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_E8B6CC_PROJECT_MAPPING_V2">
+    <column name="ACCESS_TOKEN" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ADMIN_PASSWORD" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ADMIN_USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST_COMMIT_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="PROJECT_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REPOSITORY_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REPOSITORY_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REPOSITORY_URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_E8B6CC_PR_ISSUE_KEY">
+    <column name="DOMAIN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="ISSUE_KEY" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="PULL_REQUEST_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_E8B6CC_PR_PARTICIPANT">
+    <column name="APPROVED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="DOMAIN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="PULL_REQUEST_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ROLE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="USERNAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <foreignKey fromTable="AO_E8B6CC_PR_PARTICIPANT" fromColumn="PULL_REQUEST_ID" toTable="AO_E8B6CC_PULL_REQUEST" toColumn="ID"/>
+  </table>
+  <table name="AO_E8B6CC_PR_TO_COMMIT">
+    <column name="COMMIT_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="DOMAIN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="REQUEST_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_E8B6CC_PR_TO_COMMIT" fromColumn="COMMIT_ID" toTable="AO_E8B6CC_COMMIT" toColumn="ID"/>
+    <foreignKey fromTable="AO_E8B6CC_PR_TO_COMMIT" fromColumn="REQUEST_ID" toTable="AO_E8B6CC_PULL_REQUEST" toColumn="ID"/>
+  </table>
+  <table name="AO_E8B6CC_PULL_REQUEST">
+    <column name="AUTHOR" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="COMMENT_COUNT" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="CREATED_ON" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="DESTINATION_BRANCH" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="DOMAIN_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST_STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="REMOTE_ID" primaryKey="false" autoIncrement="false" sqlType="-5" precision="19"/>
+    <column name="SOURCE_BRANCH" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SOURCE_REPO" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TO_REPOSITORY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="UPDATED_ON" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="URL" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+  </table>
+  <table name="AO_E8B6CC_REPOSITORY_MAPPING">
+    <column name="ACTIVITY_LAST_SYNC" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="DELETED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="FORK" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="FORK_OF_NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FORK_OF_OWNER" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="FORK_OF_SLUG" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="LAST_CHANGESET_NODE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="LAST_COMMIT_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="LINKED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+    <column name="LOGO" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="NAME" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="ORGANIZATION_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="SLUG" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SMARTCOMMITS_ENABLED" primaryKey="false" autoIncrement="false" sqlType="-7" precision="1"/>
+  </table>
+  <table name="AO_E8B6CC_REPO_TO_CHANGESET">
+    <column name="CHANGESET_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="REPOSITORY_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <foreignKey fromTable="AO_E8B6CC_REPO_TO_CHANGESET" fromColumn="CHANGESET_ID" toTable="AO_E8B6CC_CHANGESET_MAPPING" toColumn="ID"/>
+    <foreignKey fromTable="AO_E8B6CC_REPO_TO_CHANGESET" fromColumn="REPOSITORY_ID" toTable="AO_E8B6CC_REPOSITORY_MAPPING" toColumn="ID"/>
+  </table>
+  <table name="AO_E8B6CC_SYNC_AUDIT_LOG">
+    <column name="END_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="EXC_TRACE" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="FIRST_REQUEST_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="FLIGHT_TIME_MS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="NUM_REQUESTS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="REPO_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+    <column name="START_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="SYNC_STATUS" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="SYNC_TYPE" primaryKey="false" autoIncrement="false" sqlType="12" precision="255"/>
+    <column name="TOTAL_ERRORS" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <table name="AO_E8B6CC_SYNC_EVENT">
+    <column name="EVENT_CLASS" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="EVENT_DATE" primaryKey="false" autoIncrement="false" sqlType="93" precision="29" scale="6"/>
+    <column name="EVENT_JSON" primaryKey="false" autoIncrement="false" sqlType="12" precision="1073741824"/>
+    <column name="ID" primaryKey="true" autoIncrement="true" sqlType="4" precision="10"/>
+    <column name="REPO_ID" primaryKey="false" autoIncrement="false" sqlType="4" precision="10"/>
+  </table>
+  <data tableName="AO_013613_HD_SCHEME">
+    <column name="DEFAULT_SCHEME"/>
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <row>
+      <boolean>true</boolean>
+      <string>Default Holiday Scheme</string>
+      <integer>1</integer>
+      <string>Default Holiday Scheme</string>
+    </row>
+  </data>
+  <data tableName="AO_013613_HD_SCHEME_DAY">
+    <column name="DATE"/>
+    <column name="DESCRIPTION"/>
+    <column name="DURATION_SECONDS"/>
+    <column name="HOLIDAY_SCHEME_ID"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_013613_HD_SCHEME_MEMBER">
+    <column name="HOLIDAY_SCHEME_ID"/>
+    <column name="ID"/>
+    <column name="USER_KEY"/>
+  </data>
+  <data tableName="AO_013613_PERMISSION_GROUP">
+    <column name="GROUP_KEY"/>
+    <column name="ID"/>
+    <column name="PERMISSION_KEY"/>
+    <row>
+      <string>administrators</string>
+      <integer>1</integer>
+      <string>tempo.teams.manage</string>
+    </row>
+    <row>
+      <string>administrators</string>
+      <integer>2</integer>
+      <string>tempo.timetracking.browse</string>
+    </row>
+    <row>
+      <string>jira-developers</string>
+      <integer>3</integer>
+      <string>tempo.timetracking.browse</string>
+    </row>
+  </data>
+  <data tableName="AO_013613_WL_SCHEME">
+    <column name="DEFAULT_SCHEME"/>
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+  </data>
+  <data tableName="AO_013613_WL_SCHEME_DAY">
+    <column name="DAY"/>
+    <column name="ID"/>
+    <column name="REQUIRED_SECONDS"/>
+    <column name="WORKLOAD_SCHEME_ID"/>
+  </data>
+  <data tableName="AO_013613_WL_SCHEME_MEMBER">
+    <column name="ID"/>
+    <column name="MEMBER_KEY"/>
+    <column name="WORKLOAD_SCHEME_ID"/>
+  </data>
+  <data tableName="AO_098293_ANNOUNCEMENT_ENTITY">
+    <column name="CREATOR"/>
+    <column name="END_TIME"/>
+    <column name="EVENT_TIME"/>
+    <column name="ID"/>
+    <column name="MESSAGE"/>
+    <column name="START_TIME"/>
+    <column name="TARGET_GROUPS"/>
+    <column name="URL"/>
+  </data>
+  <data tableName="AO_098293_CONFIGURATION_ENTITY">
+    <column name="ACE_ENABLED"/>
+    <column name="ID"/>
+    <column name="ZONE_ID"/>
+  </data>
+  <data tableName="AO_21D670_WHITELIST_RULES">
+    <column name="ALLOWINBOUND"/>
+    <column name="EXPRESSION"/>
+    <column name="ID"/>
+    <column name="TYPE"/>
+    <row>
+      <boolean>false</boolean>
+      <string>17da435a-cd6b-3ebc-951c-f6bf6dd15554</string>
+      <integer>1</integer>
+      <string>APPLICATION_LINK</string>
+    </row>
+    <row>
+      <boolean>false</boolean>
+      <string>17da435a-cd6b-3ebc-951c-f6bf6dd15554</string>
+      <integer>2</integer>
+      <string>APPLICATION_LINK</string>
+    </row>
+    <row>
+      <boolean>false</boolean>
+      <string>http://www.atlassian.com/*</string>
+      <integer>3</integer>
+      <string>WILDCARD_EXPRESSION</string>
+    </row>
+    <row>
+      <boolean>false</boolean>
+      <string>05a21f11-0455-3a0b-91ae-0ae99abf1104</string>
+      <integer>4</integer>
+      <string>APPLICATION_LINK</string>
+    </row>
+  </data>
+  <data tableName="AO_38321B_CUSTOM_CONTENT_LINK">
+    <column name="CONTENT_KEY"/>
+    <column name="ID"/>
+    <column name="LINK_LABEL"/>
+    <column name="LINK_URL"/>
+    <column name="SEQUENCE"/>
+  </data>
+  <data tableName="AO_3A3ECC_JIRACOMMENT_MAPPING">
+    <column name="COMMENT_ID"/>
+    <column name="ID"/>
+    <column name="ISSUE_ID"/>
+    <column name="IS_NATIVE"/>
+    <column name="NATIVE"/>
+    <column name="PARENT_ID"/>
+    <column name="REMOTE_ID"/>
+    <column name="REMOTE_OBJECT_TYPE"/>
+    <column name="REMOTE_SYSTEM_ID"/>
+  </data>
+  <data tableName="AO_3A3ECC_JIRAMAPPING_BEAN">
+    <column name="ATTACHMENT_SYNC_ENABLED"/>
+    <column name="AUTO_PULL_COMMENTS_ENABLED"/>
+    <column name="AUTO_PUSH_COMMENTS_ENABLED"/>
+    <column name="AUTO_PUSH_COMMENT_FOR_MS"/>
+    <column name="ENABLE_RESTRICTED_COMMENTS"/>
+    <column name="EXTERNAL_TO_JIRA_MAPPING_ID"/>
+    <column name="ID"/>
+    <column name="JIRAMAPPING_SET_ID"/>
+    <column name="JIRA_TO_EXTERNAL_MAPPING_ID"/>
+    <column name="QUERY_OPTIMIZED"/>
+    <column name="REMOTE_OBJECT_TYPE"/>
+    <column name="REMOTE_SYSTEM_ID"/>
+    <column name="REQUIRED_FIELD_CHECK_EN"/>
+  </data>
+  <data tableName="AO_3A3ECC_JIRAMAPPING_SCHEME">
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="JSON_MAPPING"/>
+    <column name="NAME"/>
+  </data>
+  <data tableName="AO_3A3ECC_JIRAMAPPING_SET">
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+  </data>
+  <data tableName="AO_3A3ECC_JIRAPROJECT_MAPPING">
+    <column name="ID"/>
+    <column name="JIRAMAPPING_SCHEME_ID"/>
+    <column name="PROJECT_ID"/>
+    <row>
+      <integer>1</integer>
+      <integer xsi:nil="true"/>
+      <integer>10000</integer>
+    </row>
+  </data>
+  <data tableName="AO_3A3ECC_REMOTE_IDCF">
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="ID"/>
+    <column name="REMOTE_OBJECT_TYPE"/>
+    <column name="REMOTE_SYSTEM_ID"/>
+  </data>
+  <data tableName="AO_3A3ECC_REMOTE_LINK_CONFIG">
+    <column name="CONNECTION_ID"/>
+    <column name="DISPLAY_TEMPLATE"/>
+    <column name="ENABLED"/>
+    <column name="ID"/>
+    <column name="OBJECT_TYPE"/>
+  </data>
+  <data tableName="AO_437CB5_AGREEMENT">
+    <column name="ACCESS_KEY"/>
+    <column name="ALLOW_PUBLIC_COMMENTS"/>
+    <column name="ID"/>
+    <column name="ISSUE_TYPE"/>
+    <column name="NAME"/>
+    <column name="PROJECT"/>
+    <column name="RECEIVER_URL"/>
+    <column name="SENDER_URL"/>
+    <column name="SERVICE_USER"/>
+    <column name="STATUS"/>
+    <column name="SYNC_TAGS"/>
+    <column name="UUID"/>
+  </data>
+  <data tableName="AO_437CB5_COMMENT_LINK">
+    <column name="AGREEMENT_ID"/>
+    <column name="COMMENT_ID"/>
+    <column name="COMMENT_UUID"/>
+    <column name="ID"/>
+  </data>
+  <data tableName="AO_437CB5_TICKET_LINK">
+    <column name="AGREEMENT_ID"/>
+    <column name="ID"/>
+    <column name="ISSUE_ID"/>
+    <column name="TICKET_UUID"/>
+  </data>
+  <data tableName="AO_4AEACD_WEBHOOK_DAO">
+    <column name="ENABLED"/>
+    <column name="ENCODED_EVENTS"/>
+    <column name="FILTER"/>
+    <column name="ID"/>
+    <column name="JQL"/>
+    <column name="LAST_UPDATED"/>
+    <column name="LAST_UPDATED_USER"/>
+    <column name="NAME"/>
+    <column name="REGISTRATION_METHOD"/>
+    <column name="URL"/>
+    <column name="PARAMETERS"/>
+    <column name="EXCLUDE_ISSUE_DETAILS"/>
+  </data>
+  <data tableName="AO_54307E_CONFLUENCEKB">
+    <column name="APPLINKS_APPLICATION_ID"/>
+    <column name="APPLINK_NAME"/>
+    <column name="APPLINK_URL"/>
+    <column name="ID"/>
+    <column name="SERVICE_DESK_ID"/>
+    <column name="SPACE_KEY"/>
+    <column name="SPACE_NAME"/>
+    <column name="SPACE_URL"/>
+  </data>
+  <data tableName="AO_54307E_CONFLUENCEKBENABLED">
+    <column name="CONFLUENCE_KBID"/>
+    <column name="ENABLED"/>
+    <column name="FORM_ID"/>
+    <column name="ID"/>
+    <column name="SERVICE_DESK_ID"/>
+  </data>
+  <data tableName="AO_54307E_CONFLUENCEKBLABELS">
+    <column name="CONFLUENCE_KBID"/>
+    <column name="FORM_ID"/>
+    <column name="ID"/>
+    <column name="LABEL"/>
+    <column name="SERVICE_DESK_ID"/>
+  </data>
+  <data tableName="AO_54307E_CUSTOMTHEME">
+    <column name="HEADER_BGCOLOR"/>
+    <column name="HEADER_LINK_COLOR"/>
+    <column name="HEADER_LINK_HOVER_BGCOLOR"/>
+    <column name="HEADER_LINK_HOVER_COLOR"/>
+    <column name="ID"/>
+  </data>
+  <data tableName="AO_54307E_GOAL">
+    <column name="DEFAULT_GOAL"/>
+    <column name="ID"/>
+    <column name="JQL_QUERY"/>
+    <column name="POS"/>
+    <column name="TARGET_DURATION"/>
+    <column name="TIME_METRIC_ID"/>
+    <column name="TIME_UPDATED_DATE"/>
+    <column name="CALENDAR_ID"/>
+  </data>
+  <data tableName="AO_54307E_GROUP">
+    <column name="GROUP_NAME"/>
+    <column name="ID"/>
+    <column name="VIEWPORT_ID"/>
+  </data>
+  <data tableName="AO_54307E_GROUPTOREQUESTTYPE">
+    <column name="GROUP_ID"/>
+    <column name="ID"/>
+    <column name="REQUEST_TYPE_ID"/>
+  </data>
+  <data tableName="AO_54307E_IMAGES">
+    <column name="CONTENTS"/>
+    <column name="ID"/>
+  </data>
+  <data tableName="AO_54307E_METRICCONDITION">
+    <column name="CONDITION_ID"/>
+    <column name="FACTORY_KEY"/>
+    <column name="ID"/>
+    <column name="PLUGIN_KEY"/>
+    <column name="TIME_METRIC_ID"/>
+    <column name="TYPE_NAME"/>
+  </data>
+  <data tableName="AO_54307E_QUEUE">
+    <column name="ID"/>
+    <column name="JQL"/>
+    <column name="PROJECT_ID"/>
+    <column name="PROJECT_KEY"/>
+    <column name="QUEUE_ORDER"/>
+    <column name="NAME"/>
+  </data>
+  <data tableName="AO_54307E_QUEUECOLUMN">
+    <column name="COLUMN_ID"/>
+    <column name="COLUMN_ORDER"/>
+    <column name="ID"/>
+    <column name="QUEUE_ID"/>
+  </data>
+  <data tableName="AO_54307E_REPORT">
+    <column name="CREATED_DATE"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="REPORT_ORDER"/>
+    <column name="REPORT_TYPE"/>
+    <column name="SERVICE_DESK_ID"/>
+    <column name="UPDATED_DATE"/>
+  </data>
+  <data tableName="AO_54307E_SERIES">
+    <column name="COLOR"/>
+    <column name="CREATED_DATE"/>
+    <column name="ID"/>
+    <column name="JQL"/>
+    <column name="REPORT_ID"/>
+    <column name="SERIES_DATA_TYPE"/>
+    <column name="SERIES_LABEL"/>
+    <column name="UPDATED_DATE"/>
+    <column name="TIME_METRIC_ID"/>
+  </data>
+  <data tableName="AO_54307E_SERVICEDESK">
+    <column name="ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="PROJECT_KEY"/>
+    <column name="DISABLED"/>
+    <column name="OPEN_CUSTOMER_ACCESS"/>
+    <column name="PUBLIC_SIGNUP"/>
+  </data>
+  <data tableName="AO_54307E_STATUSMAPPING">
+    <column name="FORM_ID"/>
+    <column name="ID"/>
+    <column name="STATUS_ID"/>
+    <column name="STATUS_NAME"/>
+  </data>
+  <data tableName="AO_54307E_TIMEMETRIC">
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="DEFINITION_CHANGE_DATE"/>
+    <column name="GOALS_CHANGE_DATE"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="SERVICE_DESK_ID"/>
+  </data>
+  <data tableName="AO_54307E_VIEWPORT">
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="LOGO_ID"/>
+    <column name="NAME"/>
+    <column name="PROJECT_ID"/>
+    <column name="SEND_EMAIL_NOTIFICATIONS"/>
+    <column name="THEME_ID"/>
+  </data>
+  <data tableName="AO_54307E_VIEWPORTFIELD">
+    <column name="DESCRIPTION"/>
+    <column name="DISPLAYED"/>
+    <column name="FIELD_ID"/>
+    <column name="FIELD_TYPE"/>
+    <column name="FORM_ID"/>
+    <column name="ID"/>
+    <column name="LABEL"/>
+    <column name="REQUIRED"/>
+    <column name="FIELD_ORDER"/>
+  </data>
+  <data tableName="AO_54307E_VIEWPORTFIELDVALUE">
+    <column name="FIELD_ID"/>
+    <column name="FIELD_NAME"/>
+    <column name="ID"/>
+    <column name="VALUE"/>
+    <column name="VALUE_ORDER"/>
+  </data>
+  <data tableName="AO_54307E_VIEWPORTFORM">
+    <column name="CALL_TO_ACTION"/>
+    <column name="DESCRIPTION"/>
+    <column name="ICON"/>
+    <column name="ID"/>
+    <column name="INTRO"/>
+    <column name="ISSUE_TYPE_ID"/>
+    <column name="KEY"/>
+    <column name="NAME"/>
+    <column name="VIEWPORT_ID"/>
+    <column name="FORM_ORDER"/>
+  </data>
+  <data tableName="AO_563AEE_ACTIVITY_ENTITY">
+    <column name="ACTIVITY_ID"/>
+    <column name="ACTOR_ID"/>
+    <column name="CONTENT"/>
+    <column name="GENERATOR_DISPLAY_NAME"/>
+    <column name="GENERATOR_ID"/>
+    <column name="ICON_ID"/>
+    <column name="ID"/>
+    <column name="ISSUE_KEY"/>
+    <column name="OBJECT_ID"/>
+    <column name="POSTER"/>
+    <column name="PROJECT_KEY"/>
+    <column name="PUBLISHED"/>
+    <column name="TARGET_ID"/>
+    <column name="TITLE"/>
+    <column name="URL"/>
+    <column name="USERNAME"/>
+    <column name="VERB"/>
+  </data>
+  <data tableName="AO_563AEE_ACTOR_ENTITY">
+    <column name="FULL_NAME"/>
+    <column name="ID"/>
+    <column name="PROFILE_PAGE_URI"/>
+    <column name="PROFILE_PICTURE_URI"/>
+    <column name="USERNAME"/>
+  </data>
+  <data tableName="AO_563AEE_MEDIA_LINK_ENTITY">
+    <column name="DURATION"/>
+    <column name="HEIGHT"/>
+    <column name="ID"/>
+    <column name="URL"/>
+    <column name="WIDTH"/>
+  </data>
+  <data tableName="AO_563AEE_OBJECT_ENTITY">
+    <column name="CONTENT"/>
+    <column name="DISPLAY_NAME"/>
+    <column name="ID"/>
+    <column name="IMAGE_ID"/>
+    <column name="OBJECT_ID"/>
+    <column name="OBJECT_TYPE"/>
+    <column name="SUMMARY"/>
+    <column name="URL"/>
+  </data>
+  <data tableName="AO_563AEE_TARGET_ENTITY">
+    <column name="CONTENT"/>
+    <column name="DISPLAY_NAME"/>
+    <column name="ID"/>
+    <column name="IMAGE_ID"/>
+    <column name="OBJECT_ID"/>
+    <column name="OBJECT_TYPE"/>
+    <column name="SUMMARY"/>
+    <column name="URL"/>
+  </data>
+  <data tableName="AO_60DB71_AUDITENTRY">
+    <column name="CATEGORY"/>
+    <column name="DATA"/>
+    <column name="ENTITY_CLASS"/>
+    <column name="ENTITY_ID"/>
+    <column name="ID"/>
+    <column name="TIME"/>
+    <column name="USER"/>
+  </data>
+  <data tableName="AO_60DB71_BOARDADMINS">
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="RAPID_VIEW_ID"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_60DB71_CARDCOLOR">
+    <column name="COLOR"/>
+    <column name="ID"/>
+    <column name="POS"/>
+    <column name="RAPID_VIEW_ID"/>
+    <column name="STRATEGY"/>
+    <column name="VAL"/>
+  </data>
+  <data tableName="AO_60DB71_COLUMN">
+    <column name="ID"/>
+    <column name="MAXIM"/>
+    <column name="MINIM"/>
+    <column name="NAME"/>
+    <column name="POS"/>
+    <column name="RAPID_VIEW_ID"/>
+  </data>
+  <data tableName="AO_60DB71_COLUMNSTATUS">
+    <column name="COLUMN_ID"/>
+    <column name="ID"/>
+    <column name="POS"/>
+    <column name="STATUS_ID"/>
+  </data>
+  <data tableName="AO_60DB71_DETAILVIEWFIELD">
+    <column name="FIELD_ID"/>
+    <column name="ID"/>
+    <column name="POS"/>
+    <column name="RAPID_VIEW_ID"/>
+  </data>
+  <data tableName="AO_60DB71_ESTIMATESTATISTIC">
+    <column name="FIELD_ID"/>
+    <column name="ID"/>
+    <column name="RAPID_VIEW_ID"/>
+    <column name="TYPE_ID"/>
+  </data>
+  <data tableName="AO_60DB71_ISSUERANKING">
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="ID"/>
+    <column name="ISSUE_ID"/>
+    <column name="NEXT_ID"/>
+  </data>
+  <data tableName="AO_60DB71_ISSUERANKINGLOG">
+    <column name="CUSTOM_FIELD_ID"/>
+    <column name="ID"/>
+    <column name="ISSUE_ID"/>
+    <column name="LOG_TYPE"/>
+    <column name="NEW_NEXT_ID"/>
+    <column name="NEW_PREVIOUS_ID"/>
+    <column name="OLD_NEXT_ID"/>
+    <column name="OLD_PREVIOUS_ID"/>
+    <column name="SANITY_CHECKED"/>
+  </data>
+  <data tableName="AO_60DB71_LEXORANK">
+    <column name="FIELD_ID"/>
+    <column name="ID"/>
+    <column name="ISSUE_ID"/>
+    <column name="LOCK_HASH"/>
+    <column name="LOCK_TIME"/>
+    <column name="RANK"/>
+    <column name="TYPE"/>
+    <row>
+      <integer>10011</integer>
+      <integer>3</integer>
+      <integer>-9223372036854775808</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|000000:</string>
+      <integer>0</integer>
+    </row>
+    <row>
+      <integer>10011</integer>
+      <integer>5</integer>
+      <integer>10000</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|100000:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>10011</integer>
+      <integer>6</integer>
+      <integer>10001</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|100008:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>10011</integer>
+      <integer>7</integer>
+      <integer>10002</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|10000g:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>10011</integer>
+      <integer>8</integer>
+      <integer>10003</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|10000o:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>10011</integer>
+      <integer>9</integer>
+      <integer>10004</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|10000w:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>10011</integer>
+      <integer>10</integer>
+      <integer>10005</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|100014:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>10011</integer>
+      <integer>11</integer>
+      <integer>10006</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|10001c:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>10011</integer>
+      <integer>12</integer>
+      <integer>10007</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|10001k:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>10011</integer>
+      <integer>13</integer>
+      <integer>10008</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|10001s:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>10011</integer>
+      <integer>15</integer>
+      <integer>10010</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|100028:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>10011</integer>
+      <integer>14</integer>
+      <integer>10009</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|100020:</string>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>10011</integer>
+      <integer>4</integer>
+      <integer>9223372036854775807</integer>
+      <string xsi:nil="true"/>
+      <integer xsi:nil="true"/>
+      <string>0|zzzzzz:</string>
+      <integer>2</integer>
+    </row>
+  </data>
+  <data tableName="AO_60DB71_LEXORANKBALANCER">
+    <column name="DISABLE_RANK_OPERATIONS"/>
+    <column name="FIELD_ID"/>
+    <column name="ID"/>
+    <column name="REBALANCE_TIME"/>
+  </data>
+  <data tableName="AO_60DB71_NONWORKINGDAY">
+    <column name="ID"/>
+    <column name="ISO8601_DATE"/>
+    <column name="WORKING_DAYS_ID"/>
+  </data>
+  <data tableName="AO_60DB71_QUICKFILTER">
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="POS"/>
+    <column name="QUERY"/>
+    <column name="RAPID_VIEW_ID"/>
+  </data>
+  <data tableName="AO_60DB71_RANKABLEOBJECT">
+    <column name="ID"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_60DB71_RANK_ISSUE_LINK">
+    <column name="ISSUE_ID"/>
+    <column name="NEXT_ID"/>
+  </data>
+  <data tableName="AO_60DB71_RAPIDVIEW">
+    <column name="CARD_COLOR_STRATEGY"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="OWNER_USER_NAME"/>
+    <column name="SAVED_FILTER_ID"/>
+    <column name="SPRINTS_ENABLED"/>
+    <column name="SPRINT_MARKERS_MIGRATED"/>
+    <column name="SWIMLANE_STRATEGY"/>
+  </data>
+  <data tableName="AO_60DB71_SPRINT">
+    <column name="CLOSED"/>
+    <column name="COMPLETE_DATE"/>
+    <column name="END_DATE"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="RAPID_VIEW_ID"/>
+    <column name="STARTED"/>
+    <column name="START_DATE"/>
+  </data>
+  <data tableName="AO_60DB71_SPRINTMARKER">
+    <column name="ID"/>
+    <column name="MARKER_CONTEXT"/>
+    <column name="NAME"/>
+  </data>
+  <data tableName="AO_60DB71_STATSFIELD">
+    <column name="ID"/>
+    <column name="RAPID_VIEW_ID"/>
+    <column name="TYPE_ID"/>
+  </data>
+  <data tableName="AO_60DB71_SUBQUERY">
+    <column name="ID"/>
+    <column name="QUERY"/>
+    <column name="RAPID_VIEW_ID"/>
+    <column name="SECTION"/>
+  </data>
+  <data tableName="AO_60DB71_SWIMLANE">
+    <column name="DEFAULT_LANE"/>
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="POS"/>
+    <column name="QUERY"/>
+    <column name="RAPID_VIEW_ID"/>
+  </data>
+  <data tableName="AO_60DB71_TRACKINGSTATISTIC">
+    <column name="FIELD_ID"/>
+    <column name="ID"/>
+    <column name="RAPID_VIEW_ID"/>
+    <column name="TYPE_ID"/>
+  </data>
+  <data tableName="AO_60DB71_VERSION">
+    <column name="ID"/>
+    <column name="START_DATE"/>
+    <column name="VERSION_ID"/>
+  </data>
+  <data tableName="AO_60DB71_WORKINGDAYS">
+    <column name="FRIDAY"/>
+    <column name="ID"/>
+    <column name="MONDAY"/>
+    <column name="RAPID_VIEW_ID"/>
+    <column name="SATURDAY"/>
+    <column name="SUNDAY"/>
+    <column name="THURSDAY"/>
+    <column name="TIMEZONE"/>
+    <column name="TUESDAY"/>
+    <column name="WEDNESDAY"/>
+  </data>
+  <data tableName="AO_86ED1B_GRACE_PERIOD">
+    <column name="FROM_DATE"/>
+    <column name="ID"/>
+    <column name="OPEN_UNTIL"/>
+    <column name="RECEIVER"/>
+    <column name="TO_DATE"/>
+  </data>
+  <data tableName="AO_86ED1B_PROJECT_CONFIG">
+    <column name="ID"/>
+    <column name="PLANNING_COLOUR"/>
+    <column name="PROJECT_ID"/>
+  </data>
+  <data tableName="AO_86ED1B_STREAMS_ENTRY">
+    <column name="ACTOR"/>
+    <column name="ENTRY_CLASS"/>
+    <column name="ENTRY_TYPE"/>
+    <column name="ID"/>
+    <column name="POSTED_DATE"/>
+    <column name="RAW_PARAMS"/>
+    <column name="RAW_PARAMS_LONG"/>
+    <column name="RECEIVER"/>
+    <column name="RAW_PARAMS_JSON"/>
+  </data>
+  <data tableName="AO_86ED1B_TIMEPLAN">
+    <column name="COLLABORATOR"/>
+    <column name="COMMENT"/>
+    <column name="FROM_DATE"/>
+    <column name="ID"/>
+    <column name="PLAN_ID"/>
+    <column name="PLAN_TYPE"/>
+    <column name="SECONDS"/>
+    <column name="TIME_TYPE"/>
+    <column name="TO_DATE"/>
+    <column name="WORKFLOW_STATUS"/>
+    <column name="DESCRIPTION"/>
+    <column name="REQUESTER"/>
+    <column name="REVIEWER"/>
+  </data>
+  <data tableName="AO_86ED1B_TIMESHEET_STATUS">
+    <column name="ACTOR"/>
+    <column name="DATE_CHANGED"/>
+    <column name="DATE_CREATED"/>
+    <column name="DATE_FROM"/>
+    <column name="DATE_TO"/>
+    <column name="ID"/>
+    <column name="PERIOD"/>
+    <column name="PERIOD_TYPE"/>
+    <column name="PERIOD_VIEW"/>
+    <column name="REVIEWER_USER"/>
+    <column name="STATUS"/>
+    <column name="USERNAME"/>
+    <column name="REASON"/>
+  </data>
+  <data tableName="AO_88DE6A_AGREEMENT">
+    <column name="ACCEPTED_DATE"/>
+    <column name="ID"/>
+    <column name="VERSION"/>
+  </data>
+  <data tableName="AO_88DE6A_CONNECTION">
+    <column name="APP_LINK_ID"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="SYSTEM_TYPE_ID"/>
+  </data>
+  <data tableName="AO_88DE6A_LICENSE">
+    <column name="CONTENT"/>
+    <column name="ID"/>
+    <column name="SYSTEM_TYPE_ID"/>
+  </data>
+  <data tableName="AO_88DE6A_MAPPING_BEAN">
+    <column name="FROM_OBJECT_TYPE"/>
+    <column name="FROM_SYSTEM_ID"/>
+    <column name="ID"/>
+    <column name="LABEL"/>
+    <column name="TO_OBJECT_TYPE"/>
+    <column name="TO_SYSTEM_ID"/>
+  </data>
+  <data tableName="AO_88DE6A_MAPPING_ENTRY">
+    <column name="DEFAULT_VALUE"/>
+    <column name="FROM_FIELD"/>
+    <column name="ID"/>
+    <column name="JSONTRANSFORMER_ATTRIBUTES"/>
+    <column name="MAPPING_BEAN_ID"/>
+    <column name="TO_FIELD"/>
+    <column name="TRANSFORMER"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_88DE6A_TRANSACTION">
+    <column name="ACTION"/>
+    <column name="ID"/>
+    <column name="LOCAL_OBJECT_ID"/>
+    <column name="REMOTE_OBJECT_ID"/>
+    <column name="REMOTE_SYSTEM_ID"/>
+    <column name="REMOTE_SYSTEM_TYPE"/>
+    <column name="RESULT"/>
+    <column name="STATUS"/>
+    <column name="TIME"/>
+    <column name="USER"/>
+  </data>
+  <data tableName="AO_88DE6A_TRANSACTION_CONTENT">
+    <column name="CONTENT"/>
+    <column name="ID"/>
+    <column name="TRANSACTION_ID"/>
+  </data>
+  <data tableName="AO_88DE6A_TRANSACTION_LOG">
+    <column name="ID"/>
+    <column name="LEVEL"/>
+    <column name="MESSAGE"/>
+    <column name="TIME"/>
+    <column name="TRANSACTION_ID"/>
+  </data>
+  <data tableName="AO_A44657_HEALTH_CHECK_ENTITY">
+    <column name="ID"/>
+  </data>
+  <data tableName="AO_AEFED0_MEMBERSHIP">
+    <column name="AVAILABILITY"/>
+    <column name="FROM_DATE"/>
+    <column name="ID"/>
+    <column name="TEAM_MEMBER_ID"/>
+    <column name="TEAM_ROLE_ID"/>
+    <column name="TO_DATE"/>
+    <row>
+      <integer>100</integer>
+      <timestamp xsi:nil="true"/>
+      <integer>1</integer>
+      <integer>1</integer>
+      <integer>1</integer>
+      <timestamp xsi:nil="true"/>
+    </row>
+  </data>
+  <data tableName="AO_AEFED0_TEAM">
+    <column name="DESCRIPTION"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <row>
+      <string xsi:nil="true"/>
+      <integer>1</integer>
+      <string>Default Tempo Team</string>
+    </row>
+  </data>
+  <data tableName="AO_AEFED0_TEAM_LINK">
+    <column name="ID"/>
+    <column name="SCOPE"/>
+    <column name="TEAM_ID"/>
+    <column name="TYPE"/>
+  </data>
+  <data tableName="AO_AEFED0_TEAM_MEMBER">
+    <column name="ID"/>
+    <column name="MEMBER_KEY"/>
+    <column name="MEMBER_TYPE"/>
+    <column name="ROLE_TYPE"/>
+    <row>
+      <integer>1</integer>
+      <string>administrators</string>
+      <string>group</string>
+      <string>lead</string>
+    </row>
+    <row>
+      <integer>2</integer>
+      <string>jira-developers</string>
+      <string>group</string>
+      <string>member</string>
+    </row>
+  </data>
+  <data tableName="AO_AEFED0_TEAM_MEMBER_V2">
+    <column name="ID"/>
+    <column name="MEMBER_KEY"/>
+    <column name="MEMBER_TYPE"/>
+    <column name="TEAM_ID"/>
+    <row>
+      <integer>1</integer>
+      <string>jira-developers</string>
+      <string>GROUP</string>
+      <integer>1</integer>
+    </row>
+  </data>
+  <data tableName="AO_AEFED0_TEAM_PERMISSION">
+    <column name="ID"/>
+    <column name="MEMBER_KEY"/>
+    <column name="PERMISSION_KEY"/>
+    <column name="PERMISSION_TYPE"/>
+    <column name="TEAM_ID"/>
+    <row>
+      <integer>2</integer>
+      <string>administrators</string>
+      <string>tempo.timesheets.approve.timesheet</string>
+      <string>GROUP</string>
+      <integer>1</integer>
+    </row>
+  </data>
+  <data tableName="AO_AEFED0_TEAM_ROLE">
+    <column name="I18N_KEY"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <row>
+      <string>tempo-teams.role.member</string>
+      <integer>1</integer>
+      <string>Member</string>
+    </row>
+    <row>
+      <string>tempo-teams.role.product.owner</string>
+      <integer>2</integer>
+      <string>Product Owner</string>
+    </row>
+    <row>
+      <string>tempo-teams.role.scrum.master</string>
+      <integer>3</integer>
+      <string>Scrum Master</string>
+    </row>
+    <row>
+      <string>tempo-teams.role.developer</string>
+      <integer>4</integer>
+      <string>Developer</string>
+    </row>
+    <row>
+      <string>tempo-teams.role.designer</string>
+      <integer>5</integer>
+      <string>Designer</string>
+    </row>
+    <row>
+      <string>tempo-teams.role.tester</string>
+      <integer>6</integer>
+      <string>Tester</string>
+    </row>
+    <row>
+      <string>tempo-teams.role.technical.writer</string>
+      <integer>7</integer>
+      <string>Technical Writer</string>
+    </row>
+    <row>
+      <string>tempo-teams.role.business.analyst</string>
+      <integer>8</integer>
+      <string>Business Analyst</string>
+    </row>
+  </data>
+  <data tableName="AO_AEFED0_TEAM_TO_MEMBER">
+    <column name="ID"/>
+    <column name="TEAM_ID"/>
+    <column name="TEAM_MEMBER_ID"/>
+    <row>
+      <integer>1</integer>
+      <integer>1</integer>
+      <integer>1</integer>
+    </row>
+    <row>
+      <integer>2</integer>
+      <integer>1</integer>
+      <integer>2</integer>
+    </row>
+  </data>
+  <data tableName="AO_AEFED0_TEAM_V2">
+    <column name="ID"/>
+    <column name="LEAD"/>
+    <column name="MISSION_V2"/>
+    <column name="NAME"/>
+    <column name="SUMMARY"/>
+    <row>
+      <integer>1</integer>
+      <string xsi:nil="true"/>
+      <string xsi:nil="true"/>
+      <string>Default Tempo Team</string>
+      <string xsi:nil="true"/>
+    </row>
+  </data>
+  <data tableName="AO_B9A0F0_APPLIED_TEMPLATE">
+    <column name="ID"/>
+    <column name="PROJECT_ID"/>
+    <column name="PROJECT_TEMPLATE_MODULE_KEY"/>
+    <column name="PROJECT_TEMPLATE_WEB_ITEM_KEY"/>
+    <row>
+      <integer>1</integer>
+      <integer>10000</integer>
+      <string>com.atlassian.jira.plugins.jira-software-plugin:jira-software-development-project-template</string>
+      <string>com.atlassian.jira.plugins.jira-software-plugin:jira-software-development-project-template</string>
+    </row>
+  </data>
+  <data tableName="AO_E24DEA_HOLIDAY">
+    <column name="DAY"/>
+    <column name="ID"/>
+    <column name="LOCALE"/>
+    <column name="MONTH"/>
+    <column name="NAME"/>
+    <column name="YEAR"/>
+  </data>
+  <data tableName="AO_E24DEA_TIMESHEET_JOB_CFG">
+    <column name="CRON_EXPRESSION"/>
+    <column name="ID"/>
+    <column name="KEY"/>
+    <column name="PARAMS"/>
+    <column name="USERNAME"/>
+  </data>
+  <data tableName="AO_E8B6CC_BRANCH">
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="REPOSITORY_ID"/>
+  </data>
+  <data tableName="AO_E8B6CC_BRANCH_HEAD_MAPPING">
+    <column name="BRANCH_NAME"/>
+    <column name="HEAD"/>
+    <column name="ID"/>
+    <column name="REPOSITORY_ID"/>
+  </data>
+  <data tableName="AO_E8B6CC_CHANGESET_MAPPING">
+    <column name="AUTHOR"/>
+    <column name="AUTHOR_EMAIL"/>
+    <column name="BRANCH"/>
+    <column name="DATE"/>
+    <column name="FILES_DATA"/>
+    <column name="FILE_COUNT"/>
+    <column name="FILE_DETAILS_JSON"/>
+    <column name="ID"/>
+    <column name="ISSUE_KEY"/>
+    <column name="MESSAGE"/>
+    <column name="NODE"/>
+    <column name="PARENTS_DATA"/>
+    <column name="PROJECT_KEY"/>
+    <column name="RAW_AUTHOR"/>
+    <column name="RAW_NODE"/>
+    <column name="REPOSITORY_ID"/>
+    <column name="SMARTCOMMIT_AVAILABLE"/>
+    <column name="VERSION"/>
+  </data>
+  <data tableName="AO_E8B6CC_COMMIT">
+    <column name="AUTHOR"/>
+    <column name="AUTHOR_AVATAR_URL"/>
+    <column name="DATE"/>
+    <column name="DOMAIN_ID"/>
+    <column name="ID"/>
+    <column name="MESSAGE"/>
+    <column name="NODE"/>
+    <column name="RAW_AUTHOR"/>
+  </data>
+  <data tableName="AO_E8B6CC_GIT_HUB_EVENT">
+    <column name="CREATED_AT"/>
+    <column name="GIT_HUB_ID"/>
+    <column name="ID"/>
+    <column name="REPOSITORY_ID"/>
+    <column name="SAVE_POINT"/>
+  </data>
+  <data tableName="AO_E8B6CC_ISSUE_MAPPING">
+    <column name="ID"/>
+    <column name="ISSUE_ID"/>
+    <column name="NODE"/>
+    <column name="PROJECT_KEY"/>
+    <column name="REPOSITORY_URI"/>
+  </data>
+  <data tableName="AO_E8B6CC_ISSUE_MAPPING_V2">
+    <column name="AUTHOR"/>
+    <column name="BRANCH"/>
+    <column name="DATE"/>
+    <column name="FILES_DATA"/>
+    <column name="ID"/>
+    <column name="ISSUE_ID"/>
+    <column name="MESSAGE"/>
+    <column name="NODE"/>
+    <column name="PARENTS_DATA"/>
+    <column name="RAW_AUTHOR"/>
+    <column name="RAW_NODE"/>
+    <column name="REPOSITORY_ID"/>
+    <column name="VERSION"/>
+  </data>
+  <data tableName="AO_E8B6CC_ISSUE_TO_BRANCH">
+    <column name="BRANCH_ID"/>
+    <column name="ID"/>
+    <column name="ISSUE_KEY"/>
+  </data>
+  <data tableName="AO_E8B6CC_ISSUE_TO_CHANGESET">
+    <column name="CHANGESET_ID"/>
+    <column name="ID"/>
+    <column name="ISSUE_KEY"/>
+    <column name="PROJECT_KEY"/>
+  </data>
+  <data tableName="AO_E8B6CC_MESSAGE">
+    <column name="ADDRESS"/>
+    <column name="ID"/>
+    <column name="PAYLOAD"/>
+    <column name="PAYLOAD_TYPE"/>
+    <column name="PRIORITY"/>
+  </data>
+  <data tableName="AO_E8B6CC_MESSAGE_QUEUE_ITEM">
+    <column name="ID"/>
+    <column name="LAST_FAILED"/>
+    <column name="MESSAGE_ID"/>
+    <column name="QUEUE"/>
+    <column name="RETRIES_COUNT"/>
+    <column name="STATE"/>
+    <column name="STATE_INFO"/>
+  </data>
+  <data tableName="AO_E8B6CC_MESSAGE_TAG">
+    <column name="ID"/>
+    <column name="MESSAGE_ID"/>
+    <column name="TAG"/>
+  </data>
+  <data tableName="AO_E8B6CC_ORGANIZATION_MAPPING">
+    <column name="ACCESS_TOKEN"/>
+    <column name="ADMIN_PASSWORD"/>
+    <column name="ADMIN_USERNAME"/>
+    <column name="AUTOLINK_NEW_REPOS"/>
+    <column name="DEFAULT_GROUPS_SLUGS"/>
+    <column name="DVCS_TYPE"/>
+    <column name="HOST_URL"/>
+    <column name="ID"/>
+    <column name="NAME"/>
+    <column name="OAUTH_KEY"/>
+    <column name="OAUTH_SECRET"/>
+    <column name="SMARTCOMMITS_FOR_NEW_REPOS"/>
+  </data>
+  <data tableName="AO_E8B6CC_PROJECT_MAPPING">
+    <column name="ID"/>
+    <column name="PASSWORD"/>
+    <column name="PROJECT_KEY"/>
+    <column name="REPOSITORY_URI"/>
+    <column name="USERNAME"/>
+  </data>
+  <data tableName="AO_E8B6CC_PROJECT_MAPPING_V2">
+    <column name="ACCESS_TOKEN"/>
+    <column name="ADMIN_PASSWORD"/>
+    <column name="ADMIN_USERNAME"/>
+    <column name="ID"/>
+    <column name="LAST_COMMIT_DATE"/>
+    <column name="PROJECT_KEY"/>
+    <column name="REPOSITORY_NAME"/>
+    <column name="REPOSITORY_TYPE"/>
+    <column name="REPOSITORY_URL"/>
+  </data>
+  <data tableName="AO_E8B6CC_PR_ISSUE_KEY">
+    <column name="DOMAIN_ID"/>
+    <column name="ID"/>
+    <column name="ISSUE_KEY"/>
+    <column name="PULL_REQUEST_ID"/>
+  </data>
+  <data tableName="AO_E8B6CC_PR_PARTICIPANT">
+    <column name="APPROVED"/>
+    <column name="DOMAIN_ID"/>
+    <column name="ID"/>
+    <column name="PULL_REQUEST_ID"/>
+    <column name="ROLE"/>
+    <column name="USERNAME"/>
+  </data>
+  <data tableName="AO_E8B6CC_PR_TO_COMMIT">
+    <column name="COMMIT_ID"/>
+    <column name="DOMAIN_ID"/>
+    <column name="ID"/>
+    <column name="REQUEST_ID"/>
+  </data>
+  <data tableName="AO_E8B6CC_PULL_REQUEST">
+    <column name="AUTHOR"/>
+    <column name="COMMENT_COUNT"/>
+    <column name="CREATED_ON"/>
+    <column name="DESTINATION_BRANCH"/>
+    <column name="DOMAIN_ID"/>
+    <column name="ID"/>
+    <column name="LAST_STATUS"/>
+    <column name="NAME"/>
+    <column name="REMOTE_ID"/>
+    <column name="SOURCE_BRANCH"/>
+    <column name="SOURCE_REPO"/>
+    <column name="TO_REPOSITORY_ID"/>
+    <column name="UPDATED_ON"/>
+    <column name="URL"/>
+  </data>
+  <data tableName="AO_E8B6CC_REPOSITORY_MAPPING">
+    <column name="ACTIVITY_LAST_SYNC"/>
+    <column name="DELETED"/>
+    <column name="FORK"/>
+    <column name="FORK_OF_NAME"/>
+    <column name="FORK_OF_OWNER"/>
+    <column name="FORK_OF_SLUG"/>
+    <column name="ID"/>
+    <column name="LAST_CHANGESET_NODE"/>
+    <column name="LAST_COMMIT_DATE"/>
+    <column name="LINKED"/>
+    <column name="LOGO"/>
+    <column name="NAME"/>
+    <column name="ORGANIZATION_ID"/>
+    <column name="SLUG"/>
+    <column name="SMARTCOMMITS_ENABLED"/>
+  </data>
+  <data tableName="AO_E8B6CC_REPO_TO_CHANGESET">
+    <column name="CHANGESET_ID"/>
+    <column name="ID"/>
+    <column name="REPOSITORY_ID"/>
+  </data>
+  <data tableName="AO_E8B6CC_SYNC_AUDIT_LOG">
+    <column name="END_DATE"/>
+    <column name="EXC_TRACE"/>
+    <column name="FIRST_REQUEST_DATE"/>
+    <column name="FLIGHT_TIME_MS"/>
+    <column name="ID"/>
+    <column name="NUM_REQUESTS"/>
+    <column name="REPO_ID"/>
+    <column name="START_DATE"/>
+    <column name="SYNC_STATUS"/>
+    <column name="SYNC_TYPE"/>
+    <column name="TOTAL_ERRORS"/>
+  </data>
+  <data tableName="AO_E8B6CC_SYNC_EVENT">
+    <column name="EVENT_CLASS"/>
+    <column name="EVENT_DATE"/>
+    <column name="EVENT_JSON"/>
+    <column name="ID"/>
+    <column name="REPO_ID"/>
+  </data>
+</backup>
